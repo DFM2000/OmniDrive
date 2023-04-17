@@ -1,10 +1,10 @@
-#ifndef OmniMove_H
-#define OmniMove_H
+#ifndef OmniDrive_H
+#define OmniDrive_H
 
 #include "mbed.h"
 
 /*
-OmniMove.h
+OmniDrive.h
 オムニ・メカナム等の全方位移動ベクトル演算ライブラリ
 Designer: Watanabe Yuuto
 
@@ -38,9 +38,9 @@ Designer: Watanabe Yuuto
 
 ・使用例(4輪の場合)
 #include "mbed.h"
-#include "OmniMove/OmniMove.h" //インクルァぁドしてネ
+#include "OmniDrive/OmniDrive.h" //インクルァぁドしてネ
  
-OmniMove mekanamu; //TickerやTimerのように宣言
+OmniDrive mekanamu; //TickerやTimerのように宣言
  
 int main(){
     float motor_output[4];//それぞれのモータ出力変数(配列)を用意
@@ -58,7 +58,7 @@ int main(){
 }
 */
 
-class OmniMove
+class OmniDrive
 {
 public:
     /*
