@@ -6,7 +6,7 @@
 /*
 OmniDrive.h
 オムニ・メカナム等の全方位移動ベクトル演算ライブラリ
-Designer: Watanabe Yuuto
+Designer: Watanabe Yuto
 
 このライブラリは極座標(or直交座標)で表したマシンの走行速度、進行方向から
 各車輪の回転速度を演算するライブラリです。
@@ -40,7 +40,7 @@ Designer: Watanabe Yuuto
 #include "mbed.h"
 #include "OmniDrive/OmniDrive.h" //インクルァぁドしてネ
  
-OmniDrive mekanamu; //TickerやTimerのように宣言
+OmniDrive mekanamu; //TickerやTimerのようにインスタンスを生成
  
 int main(){
     float motor_output[4];//それぞれのモータ出力変数(配列)を用意

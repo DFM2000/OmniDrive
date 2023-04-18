@@ -55,7 +55,7 @@ float OmniDrive::output_(int n){
 
 void OmniDrive::output(float *V){
     for(i = 0;i < this->nWheel;i++){
-        V[i] = (float)(Vx*Vx_wheel[i] + Vy*Vy_wheel[i] + Vroll);
+        V[i] = (float)(this->Vx*this->Vx_wheel[i] + this->Vy*this->Vy_wheel[i] + Vroll);
     }
 }
 
