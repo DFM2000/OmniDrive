@@ -8,17 +8,17 @@ mbed-osベースのライブラリです。
 
 - ホイールの位置関係(4つの場合)
   注.4つの場合は0,1,2,3とナンバリングする
-       front
-  ┌───────────────┐
-  │     w1←       │
- l│       y       │r
- e│       ↑     w0│i
- f│↓      . →x   ↑│g
- t│w2             │h
-  │               │t
-  │       →w3     │
-  └───────────────┘
-         back       
+>       front
+>  ┌───────────────┐
+>  │     w1←       │
+> l│       y       │r
+> e│       ↑     w0│i
+> f│↓      . →x   ↑│g
+> t│w2             │h
+>  │               │t
+>  │       →w3     │
+>  └───────────────┘
+>         back       
 この場合の配置では0番目の車輪軸の角度fstWheelAngは0度となる
 
 - マシンの進行方向thetaについて
@@ -35,7 +35,7 @@ mbed-osベースのライブラリです。
 
 > #include "mbed.h"
 > #include "OmniDrive/OmniDrive.h" //インクルァぁドしてネ
->  
+> 
 > OmniDrive mekanamu; //TickerやTimerのように宣言
 >  
 > int main(){
