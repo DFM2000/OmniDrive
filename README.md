@@ -9,17 +9,19 @@ mbed-osベースのライブラリです。
 - ホイールの位置関係(4つの場合)
   注.4つの場合は0,1,2,3とナンバリングする
 
->       front
->  ┌───────────────┐
->  │     w1←       │
-> l│       y       │r
-> e│       ↑     w0│i
-> f│↓      . →x   ↑│g
-> t│w2             │h
->  │               │t
->  │       →w3     │
->  └───────────────┘
->         back       
+```
+       front
+  ┌───────────────┐
+  │     w1←       │
+ l│       y       │r
+ e│       ↑     w0│i
+ f│↓      . →x   ↑│g
+ t│w2             │h
+  │               │t
+  │       →w3     │
+  └───────────────┘
+         back       
+```
 
 この場合の配置では0番目の車輪軸の角度fstWheelAngは0度となる
 
@@ -34,23 +36,24 @@ mbed-osベースのライブラリです。
 
 ## サンプルコード
 以下が4輪の場合のサンプルコードになります。
-
-> #include "mbed.h"
-> #include "OmniDrive/OmniDrive.h" //インクルァぁドしてネ
-> 
-> OmniDrive mekanamu; //TickerやTimerのように宣言
->  
-> int main(){
->     float motor_output[4];//それぞれのモータ出力変数(配列)を用意
->     
->     mekanamu.setup(4,45); //車輪の個数、位置を設定(1度宣言すればいい)
->     
->     while(1) {
->         
->         mekanamu.input_polar(0.5,90,0); //マシンの走行速度、進行方向、回転速度の入力
->         
->         //配列の先頭アドレスを渡すことでそれぞれのモータ出力変数に値を入力
->         mekanamu.output(motor_output);
->         
->     }
-> }
+```
+ #include "mbed.h"
+ #include "OmniDrive/OmniDrive.h" //インクルァぁドしてネ
+ 
+ OmniDrive mekanamu; //TickerやTimerのように宣言
+  
+ int main(){
+     float motor_output[4];//それぞれのモータ出力変数(配列)を用意
+     
+     mekanamu.setup(4,45); //車輪の個数、位置を設定(1度宣言すればいい)
+     
+     while(1) {
+         
+         mekanamu.input_polar(0.5,90,0); //マシンの走行速度、進行方向、回転速度の入力
+         
+         //配列の先頭アドレスを渡すことでそれぞれのモータ出力変数に値を入力
+         mekanamu.output(motor_output);
+         
+     }
+ }
+```
